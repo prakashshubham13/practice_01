@@ -6,9 +6,8 @@ const Todo = () => {
   const [list,updateList] = React.useState(["H!","SHUBH"]); 
   const clearList = (ind) => {
     let arr = list;
-    // arr=arr.splice(ind,1);
-    console.log("clear",ind);
-    updateList(arr.splice(ind,1));
+    arr.splice(ind,1);
+    updateList([...arr]);
   };
   return (
     <div>

@@ -10,8 +10,7 @@ const Todo = () => {
     updateList([...arr]);
   };
   return (
-    <div>
-      <h1>TODO</h1>
+    <div className='todo'>
       {
         list.map((data,index) => (
           <Itemlist data={data} uniqueKey={index.toString()} clearList={(index)=>clearList(index)} index={index}/>

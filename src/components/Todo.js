@@ -11,11 +11,13 @@ const Todo = () => {
   };
   return (
     <div className='todo'>
-      {
-        list.map((data,index) => (
-          <Itemlist data={data} uniqueKey={index.toString()} clearList={(index)=>clearList(index)} index={index}/>
-        ))
-      }
+     <div className='scroll'>
+     {
+      list.map((data,index) => (
+        <Itemlist data={data} uniqueKey={index.toString()} clearList={(index)=>clearList(index)} index={index}/>
+      ))
+    }
+     </div>
       <Additem modifyList={(val)=>updateList([...list,val])}/>
     </div>
   )
